@@ -1,0 +1,65 @@
+{
+  "recipes": [
+    {
+      "recipeName": "Hot dogs",
+      "createdBy": "mike tyson",
+      "meal": "",
+      "prepTime": "40 min",
+      "cookTime": "60 min",
+      "cookTemp": "400",
+      "tempType": "",
+      "servingAmount": "two people",
+      "servingType": "hotdogs",
+      "photo": "",
+      "id": 1
+    }
+  ],
+  "steps": [
+    {
+      "stepId": 1,
+      "ingredient": [
+        1,
+        "4",
+        "",
+        "sugar",
+        "Put into the pot",
+        1
+      ],
+      "recipeId": 1,
+      "id": 1
+    },
+    {
+      "stepId": 2,
+      "ingredient": [
+        1,
+        "4",
+        "",
+        "sugar",
+        "Put into the pot",
+        1
+      ],
+      "recipeId": 1,
+      "id": 2
+    },
+    {
+      "stepId": 1,
+      "ingredient": {},
+      "recipeId": 1,
+      "id": 3
+    }
+  ],
+  "notes": [
+    {
+      "recipeId": 1,
+      "note": "This is a note",
+      "id": 1
+    }
+  ],
+  "users": [
+    {
+      "createdBy": "mike tyson",
+      "recipeId": 1,
+      "id": 1
+    }
+  ]
+}
