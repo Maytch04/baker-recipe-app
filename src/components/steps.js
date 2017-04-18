@@ -99,7 +99,7 @@ const Steps = React.createClass({
 	          		<textarea className="directions" name="directions" onChange={this.update} placeholder="Directions that go with this step" value={this.state.directions}>
 	          		</textarea>
 
-	          		<button className="submit"type="submit" onSubmit={this.handleSubmit}>Submit Steps</button>
+	          		<button className="submit"type="submit" onSubmit={this.handleSubmit}>Submit Step</button>
 	          	  </div>
 				</form>
 			</div>

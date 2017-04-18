@@ -121,7 +121,7 @@ const RecipesList = React.createClass({
         </form>
 
           <div className="recipeSubmit">
-            <button className="recipeForm" type="submit" name="clone" value="Clone" form="recipesForm">Submit Recipe</button>
+            <button className="recipeForm" type="submit" name="clone" value="Clone" form="recipesForm">Save Recipe</button>
           </div>
         
           {this.props.recipes.map(recipe=>(
