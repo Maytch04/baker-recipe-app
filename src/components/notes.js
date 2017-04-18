@@ -42,7 +42,7 @@ const Notes = React.createClass({
 		return(
 			<div>
 			<form onSubmit={this.handleSubmit}>
-				<textarea rows="4" cols="50" name="note" onChange={this.update} placeholder="" value={this.state.note}>
+				<textarea name="note" onChange={this.update} placeholder="" value={this.state.note}>
           		</textarea>
 			</form>
 			</div>

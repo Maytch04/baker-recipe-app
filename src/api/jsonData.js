@@ -10,14 +10,17 @@ export function getRecipe(){
 	})
 }
 
-export function getIngredients(){
-	axios.get('http://localhost:3001/steps').then(ingredients=>{
+export function getSteps(){
+	axios.get('http://localhost:3001/steps').then(steps=>{
+		console.log(steps.data)
 		store.dispatch({
-			type:'GET_INGREDIENT',
-			ingredients: ingredients.data
+			type:'GET_STEPS',
+			steps: steps.data
 		})
 	})
 }
+
+
 
 export function getNotes(){
 	axios.get('http://localhost:3001/notes').then(notes=>{
@@ -46,21 +49,11 @@ export function addRecipe(recipeName,createdBy,meal,prepTime,cookTime,cookTemp,t
 	})
 }
 
-// export function addSteps(directions, recipeId ){
-// 	axios.post('http://localhost:3001/steps',{
-// 		directions,
-// 		recipeId
-		
-		
-// 	}).then(res=>{
-// 		// getIngredients()
-// 	})
-// }
-
 export function addSteps(stepId, ingredients, amount, unit, ingredient, ingredientItem, directions, recipeId){
 	axios.post('http://localhost:3001/steps',{
 		stepId, 
 		ingredient, 
+		directions,
 		recipeId
 		
 	}).then(res=>{

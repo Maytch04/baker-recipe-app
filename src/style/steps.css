@@ -1,0 +1,54 @@
+input{
+	background: #F1F1F1;
+}
+
+textarea{
+	background: #F1F1F1;
+}
+
+.ingredients{
+	display:flex; 
+	flex-direction: row;
+	margin-top: 70px;
+	margin-left: -25px;
+}
+
+.ingredients>input{
+	width: 14%;
+    height: 30px;
+    border-radius: 5px;
+    margin-left: 25px;
+}
+
+.ingredients>input:nth-child(3){
+	width: 40%;
+}
+
+.addIngredient{
+	width: 18%;
+    height: 33px;
+    float: right;
+    margin-right: 13px;
+    margin-top: 3px;
+    border-radius: 7px;
+    margin-left: 10px;
+}
+
+.submit{
+	width: 18%;
+    height: 33px;
+    float: right;
+    margin-right: 13px;
+    margin-top: 7px;
+    border-radius: 7px;
+    margin-left: 10px;
+}
+
+.directions{
+	width: 550px;
+    height: 100px;
+    margin-top: 20px;
+    border-radius: 5px;
+
+}
+

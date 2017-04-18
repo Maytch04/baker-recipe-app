@@ -1,0 +1,203 @@
+body{
+	width:100%;
+	margin:auto;
+}
+
+input{
+	background: #F1F1F1;
+	outline: none;
+	font-size: 12px;
+	padding-left: 5px;
+}
+
+input:visited{
+	background: #F1F1F1;
+}
+
+input[type="text"]enabled {
+    background: #fcfbcc;
+};
+
+:[disabled] {
+    background: #ddd;
+}
+
+textarea{
+	background: #F1F1F1;
+    font-size: 14px;
+    padding: 5px;
+    outline: none;
+}
+
+.recipeContainer{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin:auto;
+	padding-left: 14px;
+	width:40%;
+	color:#6C6C6C;
+	border:1px solid #BFBFBF;
+}
+
+.basicSeperator{
+	width: 100%;
+	margin-bottom: 10px;
+
+	
+}
+.basicHR{
+	width: 78%;
+    margin-top: 55px;
+    float: right;
+    border-bottom: 1px solid #BFBFBF;
+}
+
+.basicSeperator>h2{
+	margin-top: 7%;
+	float:left;
+}
+
+.recipeName, .createdBy{
+	width: 90%;
+    height: 35px;
+    margin-right: 235px;
+    margin-top: 15px;
+    border-radius: 7px;
+    display: block;
+}
+
+.photoBox{
+	display: flex;
+	justify-content: space-between;
+
+}
+
+.photo{
+	height: 175px;
+    width: 186px;
+    margin-bottom: 24px;
+    background: #BFBFBF;
+    border-radius: 4px;
+}
+
+.serving>input:nth-child(2){
+	width: 17%;
+    margin-right: -35px;
+}
+
+.nameInputs{
+	width: 65%;
+}
+
+.radios{
+	width: 100%;
+	margin-top:10px;
+}
+
+.radio2{
+	margin-left: 26px;
+}
+
+.basicInfoCook{
+	display: flex;
+	flex-direction: row;
+	margin-left: -12px;
+	height: 29%;
+	width: 100%;
+	border:none;
+}
+
+.basicInfoCook>input{
+	height: 30px;
+    width: 16%;
+    margin-left: 9px;
+    border-radius: 4px;
+}
+
+.basicInfoCook>input:nth-child(1){
+	height: 30px;
+    width:  32%;
+    margin-left: 9px;
+    border-radius: 4px;
+    
+}
+
+ .basicInfoCook>select:nth-child(1){
+ 	height: 36px;
+ 	width: 35%;
+ 	border-radius: 4px;
+ }
+
+  .basicInfoCook>input:nth-child(4){
+ 	border-top-right-radius: 0px;
+ 	border-bottom-right-radius: 0px;
+ }
+
+ .basicInfoCook>input:nth-child(5) {
+    margin-right: 13px;
+    width: 8%;
+}
+
+ .serving{
+ 	display:flex;
+ 	flex-direction: row;
+ 	justify-content: space-between;
+    margin-top: -25px;
+ }
+
+ .serving>input{
+ 	height: 30px;
+    width: 13%;
+    margin-left: 28px;
+    border-radius: 5px
+ }
+
+ .serving>input:nth-child(3){
+ 	height: 30px;
+ 	width: 37%;
+    margin-right: 18px;
+ }
+
+ .rule{
+	width: 100%;
+	margin-top: -13px;
+	margin-bottom:  -21px;
+
+	
+}
+.stepHR{
+	width: 94%;
+    margin-top: -27px;
+    margin-right: -15px;
+    float: right;
+    border-bottom: 1px solid #BFBFBF;
+}
+
+.rule>h2{
+	/*margin-top: 7%;*/
+	float:left;
+}
+
+.recipeNotes{
+	width: 550px;
+    height: 100px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.recipeSubmit{
+	display: flex;
+	
+	width: 100%;
+}
+
+.recipeForm{
+	width: 18%;
+    height: 33px;
+    float: right;
+    margin-top: 7px;
+    margin-bottom: 10px;
+    border-radius: 7px;
+    margin-left: 457px;
+}

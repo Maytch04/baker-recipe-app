@@ -1,7 +1,8 @@
 import React from 'react'
 import{addSteps} from '../api/jsonData'
-import{getIngredients} from '../api/jsonData'
+import{getSteps} from '../api/jsonData'
 import {connect} from 'react-redux'
+
 
 
 
@@ -23,19 +24,28 @@ const Steps = React.createClass({
 		}
 	},
 	componentWillMount(){
-		getIngredients()
+		getSteps()
 	},
 
 
 	onClick(){
-		this.state.ingredient.push(this.state.ingredientId, this.state.amount, this.state.unit, this.state.ingredients, this.state.directions, this.state.recipeId )
+		
+		const ingArray={
+		"ingredientId":this.state.ingredientId, 
+		"amount":this.state.amount, 
+		"unit":this.state.unit, 
+		"ingredients":this.state.ingredients, 
+		}
+
+
+		this.state.ingredient.push(ingArray)
 
 		this.setState({
 			ingredientId:this.state.ingredientId + 1,	
 			amount:"", 
 			unit:"",
 			ingredients:"",
-			directions:"",
+			
 			
 		})
 
@@ -54,6 +64,8 @@ const Steps = React.createClass({
 
 		this.setState({
 			stepId:this.state.stepId + 1,
+			ingredient:[],
+			directions:"",
 			// recipeId:this.state.recipeId + 1, 	
 		})
 	},
@@ -67,29 +79,28 @@ const Steps = React.createClass({
 			
 			<form id="inputbox" onSubmit={this.handleSubmit}>
 
+				<div className="ingredients">
+					<input  name="amount" onChange={this.update} type="text" placeholder="Amount" value={this.state.amount}/>
 
-				<input  name="amount" onChange={this.update} type="text" placeholder="Amount" value={this.state.amount}/>
-
-
-				<select id="content" name="unit" onChange={this.update}>
-		            <option value={this.state.unit}>Cup</option>
-		            <option value={this.state.unit}>OZ</option>
-		            <option value={this.state.unit}>tbs</option>
-		            <option value={this.state.unit}>tsp</option>
-          		</select>
-
-          		<input name="ingredients" onChange={this.update} type="text" placeholder="Ingredient" value={this.state.ingredients}/>
+					<input  name="unit" onChange={this.update} type="text" placeholder="Unit" value={this.state.unit}/>
 
 
-          		<textarea rows="4" cols="50" name="directions" onChange={this.update} placeholder="Directions that go with this step" value={this.state.directions}>
-          		</textarea>
+	          		<input name="ingredients" onChange={this.update} type="text" placeholder="Ingredient" value={this.state.ingredients}/>
 
+	          		
 
+	          		
+	          		 <button className="addIngredient"type="button" id="submit" onClick={this.onClick}>Add Ingredient</button>
 
-          		 <button type="button" id="submit" onClick={this.onClick}>Add Ingredient</button>
+	          		  
+	          		
+          		  </div>
+          		  <div >
+	          		<textarea className="directions" name="directions" onChange={this.update} placeholder="Directions that go with this step" value={this.state.directions}>
+	          		</textarea>
 
-          		  <button type="submit" onSubmit={this.handleSubmit}>Submit Steps</button>
-
+	          		<button className="submit"type="submit" onSubmit={this.handleSubmit}>Submit Steps</button>
+	          	  </div>
 				</form>
 			</div>
 		)

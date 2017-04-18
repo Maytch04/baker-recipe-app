@@ -8,6 +8,7 @@ import {addUsers} from '../api/jsonData'
 import {connect} from 'react-redux'
 
 
+
 const RecipesList = React.createClass({
   getInitialState(){
     return{
@@ -25,7 +26,6 @@ const RecipesList = React.createClass({
       noteId:1,
       note:"", 
       userId:1
-
 
     }
   },
@@ -68,45 +68,61 @@ const RecipesList = React.createClass({
 
 
   render() {
-    console.log(this.state.recipeId)
     return (
-      <div>
-      <div className="photo"><img src={this.state.photo} alt="Im a broken link"/></div>
+      <div className="recipeContainer">
+      <div className="basicSeperator">
+      <h2>Basic Info</h2>
+      <div className="basicHR"></div>
+      </div>
+      
+
+       
         <form id="recipesForm" onSubmit={this.handleSubmit}>
-          
-          <input name="recipeName" onChange={this.update} type="text" placeholder="Recipe Name" value={this.state.recipeName}/>
+        <div className="photoBox"><div className="photo"><img src={this.state.photo} alt=""/></div>
+          <div className="nameInputs">
+            <input className="recipeName" name="recipeName" onChange={this.update} type="text" placeholder="Recipe Name" value={this.state.recipeName}/>
 
-          <input name="createdBy" onChange={this.update} type="text" placeholder="Created By" value={this.state.createdBy}/>
+            <input className="createdBy" name="createdBy" onChange={this.update} type="text" placeholder="Created By" value={this.state.createdBy}/>
+            <div className="radios">
+            <input type="radio" name="pubOrPriv" value="male" />Make it Public
+            <input className="radio2" type="radio" name="pubOrPriv" value="female" />Keep it Private<br />
+          </div>
+          </div> 
+        </div>
 
-          <select>
-            <option value={this.state.meal}>Breakfast</option>
-            <option value={this.state.meal}>Lunch</option>
-            <option value={this.state.meal}>Snack</option>
-            <option value={this.state.meal}>Dinner</option>
-          </select>
+        <div className="basicInfoCook">
+          <input className="meal" name="meal" onChange={this.update} type="text" placeholder="Breakfast, Lunch, Dinner" value={this.state.meal}/>
 
           <input name="prepTime" onChange={this.update} type="text" placeholder="Prep Time" value={this.state.prepTime}/>
 
           <input name="cookTime" onChange={this.update} type="text" placeholder="Cook Time" value={this.state.cookTime}/>
 
           <input name="cookTemp" onChange={this.update} type="text" placeholder="Cook Temp" value={this.state.cookTemp}/>
-          <select>
-            <option value={this.state.tempType}>F</option>
-            <option value={this.state.tempType}>C</option>
-          </select>
 
-          <input name="servingAmount" onChange={this.update} type="text" placeholder="Serving Amount" value={this.state.servingAmount}/>
+          <input name="tempType" onChange={this.update} type="text" placeholder="°F ~ °C" value={this.state.tempType}/>
 
+        </div>
+
+        <div className="serving">
+        <p>This recipe will make:</p>
+        <input  name="servingAmount" onChange={this.update} type="text" placeholder="Serving Amount" value={this.state.servingAmount}/>
           <input name="servingType" onChange={this.update} type="text" placeholder="Cookies, Batches, etc..." value={this.state.servingType}/>
-          </form>
-          <Steps />
-          <form id="recipesForm" onSubmit={this.handleSubmit}>
-          <textarea rows="4" cols="50" name="note" onChange={this.update} placeholder="" value={this.state.note}>
-          </textarea>
-      </form>
+        </div>
+        <div className="rule">
+          <h3>Step</h3>
+          <div className="stepHR"></div>
+        </div>
 
-          <button type="submit" name="clone" value="Clone" form="recipesForm">Submit</button>
-          
+        </form>
+          <Steps />
+        <form id="recipesForm" onSubmit={this.handleSubmit}>
+            <textarea className="recipeNotes" name="note" onChange={this.update} placeholder="Notes" value={this.state.note}>
+            </textarea>
+        </form>
+
+          <div className="recipeSubmit">
+            <button className="recipeForm" type="submit" name="clone" value="Clone" form="recipesForm">Submit Recipe</button>
+          </div>
         
           {this.props.recipes.map(recipe=>(
             <div key={recipe.id}>
