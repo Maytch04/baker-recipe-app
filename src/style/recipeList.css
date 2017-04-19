@@ -1,4 +1,4 @@
-body{
+ body{
 	width:100%;
 	margin:auto;
 }
@@ -167,9 +167,9 @@ textarea{
 	
 }
 .stepHR{
-	width: 94%;
+	width: 91%;
     margin-top: -27px;
-    margin-right: -15px;
+    margin-right: 0px;
     float: right;
     border-bottom: 1px solid #BFBFBF;
 }

@@ -9,7 +9,7 @@ const Notes = React.createClass({
 			recepieId:1,
 			note:'',
 			
-		}
+		
 	}, 
 
 	componentWillMount(){

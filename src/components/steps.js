@@ -1,6 +1,6 @@
 import React from 'react'
 import{addSteps} from '../api/jsonData'
-import{getSteps} from '../api/jsonData'
+import { getSteps } from '..//api/jsonData'
 import {connect} from 'react-redux'
 
 
@@ -48,7 +48,7 @@ const Steps = React.createClass({
 			
 			
 		})
-
+		
 	},
 
 
@@ -72,9 +72,7 @@ const Steps = React.createClass({
 
 
 	render(){
-		console.log(this.state.ingredient)
-		// console.log(this.state.id)
-		return(
+			return(
 			<div>
 			
 			<form id="inputbox" onSubmit={this.handleSubmit}>
@@ -108,6 +106,7 @@ const Steps = React.createClass({
 })
 
 function mapStateToProps (appState){
+	
   return{steps:appState.steps}
 }
 export default connect(mapStateToProps)(Steps)

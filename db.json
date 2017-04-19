@@ -1,54 +1,81 @@
 {
   "recipes": [
     {
-      "recipeName": "",
-      "createdBy": "",
-      "meal": "aasdfdsfdsf",
-      "prepTime": "",
-      "cookTime": "",
-      "cookTemp": "",
-      "tempType": "",
-      "servingAmount": "",
-      "servingType": "",
+      "recipeName": "Hot dogs",
+      "createdBy": "mike tyson",
+      "meal": "sauce",
+      "prepTime": "40 min",
+      "cookTime": "1 hour",
+      "cookTemp": "300",
+      "tempType": "F",
+      "servingAmount": "two people",
+      "servingType": "hotdogs",
       "photo": "",
       "id": 1
-    },
-    {
-      "recipeName": "",
-      "createdBy": "",
-      "meal": "",
-      "cookTime": "",
-      "cookTemp": "",
-      "tempType": "F",
-      "servingAmount": "",
-      "servingType": "",
-      "photo": "",
-      "id": 2
     }
   ],
-  "steps": [],
-  "notes": [
+  "steps": [
     {
-      "recipeId": 2,
-      "note": "",
+      "stepId": 1,
+      "ingredient": [
+        {
+          "ingredientId": 1,
+          "amount": "3",
+          "unit": "cups",
+          "ingredients": "sugar"
+        },
+        {
+          "ingredientId": 2,
+          "amount": "5",
+          "unit": "tbs",
+          "ingredients": "flour"
+        }
+      ],
+      "directions": "mix it all together ",
+      "recipeId": 1,
       "id": 1
     },
     {
+      "stepId": 1,
+      "ingredient": [],
+      "directions": "",
       "recipeId": 1,
-      "note": "",
       "id": 2
+    },
+    {
+      "stepId": 1,
+      "ingredient": [],
+      "directions": "",
+      "recipeId": 1,
+      "id": 3
+    },
+    {
+      "stepId": 2,
+      "ingredient": [],
+      "directions": "",
+      "recipeId": 1,
+      "id": 4
+    },
+    {
+      "stepId": 3,
+      "ingredient": [],
+      "directions": "",
+      "recipeId": 1,
+      "id": 5
+    }
+  ],
+  "notes": [
+    {
+      "recipeId": 1,
+      "note": "There are no notes for this section",
+      "id": 1
     }
   ],
   "users": [
     {
-      "createdBy": "",
-      "recipeId": 2,
-      "id": 1
-    },
-    {
-      "createdBy": "",
+      "createdBy": "mike tyson",
       "recipeId": 1,
-      "id": 2
+      "id": 1
     }
   ]
 }

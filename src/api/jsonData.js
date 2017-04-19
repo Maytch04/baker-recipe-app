@@ -1,10 +1,11 @@
 import axios from 'axios'
 import store from '../store/batchStore'
 
-export function getRecipe(){
+export function getRecipes(){
 	axios.get ('http://localhost:3001/recipes').then(recipes=>{
+		// console.log(recipes.data)
 		store.dispatch({
-			type: 'GET_RECIPE', 
+			type: 'GET_RECIPES', 
 			recipes: recipes.data
 		})
 	})
@@ -12,7 +13,7 @@ export function getRecipe(){
 
 export function getSteps(){
 	axios.get('http://localhost:3001/steps').then(steps=>{
-		console.log(steps.data)
+		// console.log(steps.data)
 		store.dispatch({
 			type:'GET_STEPS',
 			steps: steps.data
@@ -20,13 +21,23 @@ export function getSteps(){
 	})
 }
 
-
-
 export function getNotes(){
 	axios.get('http://localhost:3001/notes').then(notes=>{
+		// console.log(notes.data)
+		store.dispatch({
+			type:'GET_NOTES',
+			notes: notes.data
+		})
+	})
+}
+
+
+export function getUsers(){
+	axios.get('http://localhost:3001/users').then(users=>{
+		// console.log(users.data)
 		store.dispatch({ 
-		type:'GET_NOTES', 
-		notes:notes.data
+		type:'GET_USERS', 
+		users:users.data
 		})
 	})
 }
@@ -45,7 +56,7 @@ export function addRecipe(recipeName,createdBy,meal,prepTime,cookTime,cookTemp,t
 		
 
 	}).then(res=>{
-		// getRecipe()
+		
 	})
 }
 
@@ -57,7 +68,7 @@ export function addSteps(stepId, ingredients, amount, unit, ingredient, ingredie
 		recipeId
 		
 	}).then(res=>{
-		// getIngredients()
+		
 	})
 }
 
@@ -66,7 +77,7 @@ export function addNotes(recipeId, id, note){
 		recipeId, 
 		note
 	}).then(res=>{
-		// getNotes()
+		
 	})
 	
 }
