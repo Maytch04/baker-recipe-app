@@ -33,7 +33,8 @@ textarea{
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	margin:auto;
+	margin-left: 300px;
+	margin-top: -850px;
 	padding-left: 14px;
 	width:40%;
 	color:#6C6C6C;

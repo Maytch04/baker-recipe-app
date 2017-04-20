@@ -7,6 +7,7 @@ import {connect} from 'react-redux'
 // import {Link} from 'react-router-dom'
 
 const Preview = React.createClass({
+
 	componentWillMount(){
 		getSteps(),
 		getRecipes(),
@@ -15,48 +16,45 @@ const Preview = React.createClass({
 	}, 
 
   render() {
-  		
     return (
 
-    	<div className="previewContainer">
-
-    		{this.props.recipes.map(recipe=>(
-    		<div>
-    			<p>{recipe.createdBy}</p>
-    		
-
+    	
+			<div className="previewContainer">
+			<div className="creatorTitle"><p>TITLE</p><p>createdBy</p></div>
     		<div className="imageContainer"></div>
     		
+    			
 
     		<div className="recipeStats">
-    			<div className="type">{recipe.meal}</div>
-    			<div className="prepTime">{recipe.prepTime}</div>
-    			<div className="cookTime">{recipe.cookTime}</div>
-    			<div className="cookTemp">{recipe.cookTemp} {recipe.tempType}</div>
+				<ul>
+					<li>.type</li>
+					<li>.prepTime</li>
+					<li>.cookTime</li>
+					<li>.cookTemp</li>
+				</ul>
     		</div>
 
     		<div className="recipeCard">
-    			<div className="titleBar">{recipe.servingAmount}</div>
-    		
-    		
+    			<div className="previewTitleBar">Title Bar</div>
     			<div className="lineIngredient">
-	    			<div className="ingredietAmount">ingredient amount</div>
-	    			<div className="ingredient">ingredient</div>
-    			</div>
+					<ul>
+						<li>ingamo</li>
+						<li>ing</li>
+					</ul>
+				</div>
     		</div>
-			</div>
-  			))}
+  			
 
-    		<div className="stepNumberHR">Step #</div>
+    		
     		<div className="steps">
+				 <div className="stepNumberHR">Step #</div>
+
     			<div className="directions">directions</div>
     			<div className="amount">amount</div>
     			<div className="ingredient"> ingredient for stems</div>
     		</div>
 
     		<div className="notes">Personal Notes</div>
-    		
-    		
     	</div>
     )
   }

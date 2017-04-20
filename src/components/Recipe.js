@@ -6,14 +6,14 @@ import{addRecipe} from '../api/jsonData'
 import {addNotes} from '../api/jsonData'
 import {addUsers} from '../api/jsonData'
 import {connect} from 'react-redux'
-import {Link} from 'react-router-dom'
+
 
 
 
 const RecipesList = React.createClass({
   getInitialState(){
     return{
-      recipeId:1,
+      recipRecipePrevieweId:1,
       recipeName:'',
       createdBy:'', 
       meal:'',
@@ -74,10 +74,7 @@ const RecipesList = React.createClass({
       <div className="basicHR"></div>
       </div>
 
-      <div><Link to="/">RecipeList</Link>
-        <Link to="/recipe/1">Recipe 1</Link>
-        </div>
-      
+     
 
        
         <form id="recipesForm" onSubmit={this.handleSubmit}>
@@ -140,6 +137,6 @@ const RecipesList = React.createClass({
 })
 
 function mapStateToProps (appState){
-  return{recipes:appState.recipes,}
+  return{recipes:appState.recipes}
 }
 export default connect(mapStateToProps)(RecipesList)

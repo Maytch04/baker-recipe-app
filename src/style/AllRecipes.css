@@ -1,0 +1,50 @@
+
+.recipesGrid{
+    width:90%; 
+   margin:auto;
+    
+}
+
+.titleBar{
+    width:64%;
+    height:32px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /*line-height: 5px;*/
+    background: gray; 
+    justify-content: space-between;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    
+}
+
+.titleBar>p:nth-child(1){
+    margin-left: 10px;
+    
+}
+
+.titleBar>p:nth-child(3){
+    margin-right: 10px;
+    margin-top: 24px;
+    font-size: 30px;
+}
+
+.sideBar{
+    display: flex; 
+    justify-content: space-between;
+    align-content: center;
+     width: 160px;
+    height: 900px;
+    margin-top: -16px;
+    background:gray; 
+}
+
+
+.sideBar>ul>li{
+    list-style: none;
+    margin-top: 53px;
+    margin-left: -18px;
+    font-size: 15px;
+}
+
